@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // Variables para almacenar los datos digitados
+    double ondasEncefalicas = 0.0;
+    double estimulo = 0.0;
+
+    cout << "=========================================" << endl;
+    cout << "     SISTEMA DE ANALISIS COGNITIVO       " << endl;
+    cout << "=========================================" << endl;
+    
+    // pidiendo que digites los datos (información)
+    cout << "Digite la actividad del encefalo (en Hz): ";
+    cin >> ondasEncefalicas;
+    
+    cout << "Digite la intensidad del impulso (0.0 a 1.0): ";
+    cin >> estimulo;
+    
+    cout << endl << "Analizando los datos colocados..." << endl << endl;
+
+    // 1. Evaluacion cientifica del encefalo (Diapositiva 1)
+    cout << ">> ESTADO DEL ENCEFALO:" << endl;
+    
+    if (ondasEncefalicas >= 12.0 && ondasEncefalicas <= 30.0) {
+        cout << "   Ondas Beta: Estado de atencion comun." << endl;
+    } 
+    else if (ondasEncefalicas > 30.0 && ondasEncefalicas <= 100.0) {
+        cout << "   Ondas Gamma: Actividad ALTA (Brain Hacking)." << endl;
+    } 
+    else {
+        cout << "   Ondas Alpha/Theta: Estado de calma o descanso." << endl;
+    }
+    
+    cout << endl;
+
+    // 2. Evaluacion del dilema etico (Diapositiva 2)
+    cout << ">> EVALUACION ETICA Y LEGAL:" << endl;
+    if (estimulo > 0.7) {
+        cout << "   [ALERTA]: El impulso excede el limite." << endl;
+        cout << "   [ALERTA]: Existe una ventaja injusta." << endl;
+        cout << "   [ALERTA]: Posible dependencia del usuario." << endl;
+    } else {
+        cout << "   [OK]: Niveles y Límites aceptables. L" << endl;
+    }
+
+    cout << "=========================================" << endl;
+    return 0;
+}
